@@ -1,9 +1,87 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: "Questrial", sans-serif;
     color: rgb(50, 65, 88);
     position: relative;
 }
+/* movies pages css*/
+.movie {
+background-color: rgb( 237,235,235 );
 
+}
+.container {
+    position: relative;
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: center;
+}
+
+.container .image-container{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr ;
+   grid-gap: 10px;
+   margin: 2.5em;
+
+}
+
+.container .image-container .image {
+    height: 210px;
+    width: 330px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 7px -38px rgba(0,0,0,0.1);
+}
+
+.container .image-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s linear;
+}
+
+.container .image-container .image:hover img{
+    transform: scale(1.1);
+    
+
+}
+
+.container .popup-img{
+   position: fixed; 
+   top: 0; left: 0;
+   background: rgba(0, 0, 0, 0.8);
+   height: 100%;
+   width: 100%;
+   z-index: 100;
+   display: none;
+}
+.container .popup-img span{
+    position: absolute;
+    top: 2.5rem; right: 5rem;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+
+}
+
+.container .popup-img img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 750px;
+    object-fit: cover; */
+}
+
+
+
+
+/* index.html*/
 h1 {
     font-family: "reklame-script", sans-serif;
     font-weight: 700;
