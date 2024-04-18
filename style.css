@@ -1,6 +1,7 @@
 body {
     font-family: "Questrial", sans-serif;
-    color: rgb(50, 65, 88);;
+    color: rgb(50, 65, 88);
+    position: relative;
 }
 
 h1 {
@@ -10,3 +11,4 @@ h1 {
    color: #324158;
       
 }
+
