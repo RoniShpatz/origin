@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-    <title>Dror Shpatz</title>
+    <title>Dror Shpatz - Envite</title>
 </head>
 <body>
    <div class="header">
         <div class="logo">
-            <a href="./index.html">
+            <a href="../index.html">
                 <img src="../source/gifs/logo.gif" alt="doro logo">
                 <h1 class="logo-name">dror shpatz</h1>
                 <h2 class="logo-add"></h2> Motion Designer | Animator</h2>
@@ -43,27 +43,27 @@
         </div>
         <div class="container">
             <div class="image-container">
-                <div class="image"><img src="../source/Envite/Envite gif2.gif" alt="envite gif"></div>
-                <div class="image"><img src="../source/Envite/Envite gif full.gif" alt="envite gif"></div>
-                <div class="image"><img src="../source/Envite/frame 4.jpg" alt="envite frame"></div>
-                <div class="image"><img src="../source/Envite/frame 3.jpg" alt="envite frame"></div>
-                <div class="image"><img src="../source/Envite/frame 1.jpg" alt="envite frame"></div>
-                <div class="image"><img src="../source/Envite/frame 2.jpg" alt="envite frame"></div>
+                <div class="image" id="one"><img src="../source/Envite/envite-01.gif" alt="envite gif" class="mySlides"></div>
+                <div class="image"><img src="../source/Envite/envite-02.gif" alt="envite gif" class="mySlides"></div>
+                <div class="image"><img src="../source/Envite/envite-03.jpg" alt="envite frame" class="mySlides"></div>
+                <div class="image"><img src="../source/Envite/envite-04.jpg" alt="envite frame" class="mySlides"></div>
+                <div class="image"><img src="../source/Envite/envite-05.jpg" alt="envite frame" class="mySlides"></div>
+                <div class="image"><img src="../source/Envite/envite-06.jpg" alt="envite frame" class="mySlides"></div>
             </div>
 
             <div class="popup-img">
-                <span>&times;</span>
+                <span id="x-sighn">&times;</span>
+                <div class="left-right-buttons">
+                    <button class="left">&lt;</button>
+                    <button class="right">&gt;</button>
+                </div>
+               
                 <img src="../source/Envite/Envite gif2.gif" alt="envite gif">
             </div>
 
         </div>
-
-     
-
-
-
-
-
+    
+    
     </div>
 
 
@@ -95,16 +95,50 @@
 
 </footer>
     <script>
-       document.querySelectorAll('.image-container img').forEach(image => {
+       
+       var imageIndex =  0;
+       var images = document.getElementsByClassName("mySlides");
+
+       document.querySelectorAll('.image-container img').forEach((image, index) => {
         image.onclick = () => {
             document.querySelector('.popup-img').style.display= 'block';
             document.querySelector('.popup-img img').src = image.getAttribute('src');
+            imageIndex = index;
+            console.log(imageIndex)
+            
         }
        });
        
         document.querySelector('.popup-img span').onclick = () => {
             document.querySelector('.popup-img').style.display= 'none';
         };
+        
+       
+
+        document.querySelector('.popup-img .left-right-buttons .right').onclick = () => {
+            
+            imageIndex = imageIndex + 1;
+            if (imageIndex > images.length) {
+                imageIndex = 0
+            }
+            if (imageIndex < 0) {
+                imageIndex = 5
+            };
+            document.querySelector('.popup-img img').src = images[imageIndex].src; 
+            
+        };
+
+        document.querySelector('.popup-img .left-right-buttons .left').addEventListener('click', function() {
+           
+            imageIndex = imageIndex - 1;
+            if (imageIndex > images.length) {
+                imageIndex = 0
+            }
+            if (imageIndex < 0) {
+                imageIndex = 5
+            };
+            document.querySelector('.popup-img img').src = images[imageIndex].src; 
+        });
 
     </script>
 </body>
