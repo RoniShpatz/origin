@@ -6,7 +6,13 @@ body {
     font-family: "Questrial", sans-serif;
     color: rgb(50, 65, 88);
     position: relative;
+    display: flex;
+    flex-direction: column;
+
 }
+
+
+
 /* movies pages css*/
 .movie {
 background-color: rgb( 237,235,235 );
@@ -115,12 +121,145 @@ background-color: rgb( 237,235,235 );
     margin-bottom: 5%;
 }
 
-/* index.html*/
-h1 {
+
+/* header style*/
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 84%;
+    display: flex;
+   justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+.header .logo a {
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+}
+
+.header .logo h1 {
     font-family: "reklame-script", sans-serif;
     font-weight: 700;
    text-transform: uppercase;
-   color: #324158;
-      
+    color: #324158;
+    font-size: 3em;
+    margin-bottom: 0;
+   
+}
+.header .logo h2 {
+    margin-top: 4%;
+    color: rgb(50, 65, 88);
+} 
+
+.header-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
 }
 
+.header-buttons a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+   
+}
+
+.header-buttons a:hover{
+    color: rgb(82, 138, 227);
+}
+
+header a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* footer style*/
+
+footer {
+    background-color: rgb( 199,199,199 );
+    height: 20vh;
+    font-size: 0.9rem;
+    line-height: 120%;
+}
+.footer-contiener {
+    width: 70%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#name-footer {
+    font-weight: 600;
+    margin-bottom: 0%;
+    color: black;
+    
+}
+.footer-contiener div p {
+    margin-top: 0.2rem;
+
+}
+
+.info a {
+    text-decoration: none;
+    color: #324158;
+    
+}
+
+.info a:visited{
+    text-decoration: none;
+    color: #324158;
+}
+
+.info a:hover {
+    color: rgb(82, 138, 227);
+}
+
+.social{
+  display: flex;
+  justify-content: end;  
+}
+
+.social a {
+  margin: 3%;
+}
+
+/* index.html*/
+
+.about{
+    
+    background-color: #324158;
+}
+.about p{
+    font-size: 130%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 65%;
+    color: #dfdfdf;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.video-conteinar {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5%;
+}
+.video-conteinar .video {
+   
+ 
+    
+}
+.video-conteinar .video img{
+   
+    border-radius: 5% 5%;
+    
+}

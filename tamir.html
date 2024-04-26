@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/qtq4rlr.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <title>Dror Shpatz - TMIR Recycling Corporation</title>
+</head>
+<body>
+    
+    <my-header></my-header>
+  
+    <div class="movie">
+        <div class="movie-info">
+        <h2>TMIR Recycling Corporation</h2>
+        <p>TMIR is recycling corporation in Israel, is a public-benefit company operating on
+            a non-profit basis. <br>
+            My part: animation. production and design:<a href="ankanimation.com"> ankanimation.com</a><br> 
+            2022 </p>    
+        </div>
+
+        <iframe width="1020" height="573.75" src="https://www.youtube.com/embed/uPh2DHvyvwM?si=6vh4QhFl3w6aQX1q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+        picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+        <div class="movie-photos">
+
+        </div>
+        <div class="container">
+            <div class="image-container">
+                <div class="image" id="one"><img src="./source/tamir/2-large.png" alt="envite gif" class="mySlides"></div>
+                <div class="image"><img src="./source/tamir/1.png" alt="envite frame" class="mySlides"></div>
+                <div class="image"><img src="./source/tamir/3.png" alt="envite frame" class="mySlides"></div>
+
+            </div>
+
+            <div class="popup-img">
+                <span id="x-sighn">&times;</span>
+                <div class="left-right-buttons">
+                    <button class="left">&lt;</button>
+                    <button class="right">&gt;</button>
+                </div>
+               
+                <img src="../source/Envite/Envite gif2.gif" alt="envite gif">
+            </div>
+
+        </div>
+    
+        <a href="./index.html">Back</a>
+    </div>
+
+
+
+    
+
+    <my-footer></my-footer>
+
+
+<script  src="./header-footer.js"></script>
+    <script>
+       
+       var imageIndex =  0;
+       var images = document.getElementsByClassName("mySlides");
+
+       document.querySelectorAll('.image-container img').forEach((image, index) => {
+        image.onclick = () => {
+            document.querySelector('.popup-img').style.display= 'block';
+            document.querySelector('.popup-img img').src = image.getAttribute('src');
+            imageIndex = index;
+            console.log(imageIndex)
+            
+        }
+       });
+       
+        document.querySelector('.popup-img span').onclick = () => {
+            document.querySelector('.popup-img').style.display= 'none';
+        };
+        
+       
+
+        document.querySelector('.popup-img .left-right-buttons .right').onclick = () => {
+            
+            imageIndex = imageIndex + 1;
+            if (imageIndex > images.length) {
+                imageIndex = 0
+            }
+            if (imageIndex < 0) {
+                imageIndex = 5
+            };
+            document.querySelector('.popup-img img').src = images[imageIndex].src; 
+            
+        };
+
+        document.querySelector('.popup-img .left-right-buttons .left').addEventListener('click', function() {
+           
+            imageIndex = imageIndex - 1;
+            if (imageIndex > images.length) {
+                imageIndex = 0
+            }
+            if (imageIndex < 0) {
+                imageIndex = 5
+            };
+            document.querySelector('.popup-img img').src = images[imageIndex].src; 
+        });
+
+    </script>
+</body>
+</html>

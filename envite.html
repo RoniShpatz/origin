@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://use.typekit.net/qtq4rlr.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,21 +11,8 @@
     <title>Dror Shpatz - Envite</title>
 </head>
 <body>
-   <div class="header">
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../source/gifs/logo.gif" alt="doro logo">
-                <h1 class="logo-name">dror shpatz</h1>
-                <h2 class="logo-add"></h2> Motion Designer | Animator</h2>
-            </a>
-        </div>
-        <div class="header-buttons">
-            <a href="./index.html">Home</a>
-            <a href="./gifs.html">GIFS</a>
-            <a href="./learning.html">Learning content</a>
-            <a href="./about.html">About</a>
-        </div>
-    </div> 
+    
+    <my-header></my-header> 
   
     <div class="movie">
         <div class="movie-info">
@@ -43,12 +30,12 @@
         </div>
         <div class="container">
             <div class="image-container">
-                <div class="image" id="one"><img src="../source/Envite/envite-01.gif" alt="envite gif" class="mySlides"></div>
-                <div class="image"><img src="../source/Envite/envite-02.gif" alt="envite gif" class="mySlides"></div>
-                <div class="image"><img src="../source/Envite/envite-03.jpg" alt="envite frame" class="mySlides"></div>
-                <div class="image"><img src="../source/Envite/envite-04.jpg" alt="envite frame" class="mySlides"></div>
-                <div class="image"><img src="../source/Envite/envite-05.jpg" alt="envite frame" class="mySlides"></div>
-                <div class="image"><img src="../source/Envite/envite-06.jpg" alt="envite frame" class="mySlides"></div>
+                <div class="image" id="one"><img src="./source/Envite/envite-01.gif" alt="envite gif" class="mySlides"></div>
+                <div class="image"><img src="./source/Envite/envite-02.gif" alt="envite gif" class="mySlides"></div>
+                <div class="image"><img src="./source/Envite/envite-03.jpg" alt="envite frame" class="mySlides"></div>
+                <div class="image"><img src="./source/Envite/envite-04.jpg" alt="envite frame" class="mySlides"></div>
+                <div class="image"><img src="./source/Envite/envite-05.jpg" alt="envite frame" class="mySlides"></div>
+                <div class="image"><img src="./source/Envite/envite-06.jpg" alt="envite frame" class="mySlides"></div>
             </div>
 
             <div class="popup-img">
@@ -63,37 +50,16 @@
 
         </div>
     
-        <a href="../index.html">Back</a>
+        <a href="./index.html">Back</a>
     </div>
 
 
 
    
+    <my-footer></my-footer>
 
+    <script  src="./header-footer.js"></script>
 
-   <footer>
-    <div class="footer-contiener">
-            <p> Dror Shpatz<br> Motion Designer | Animator<br>
-                Ballyogan Road, Dublin, Ireland<br>
-                2023
-            </p>
-            <div class="info">
-                <a href="malito: shpatz84@gmail.com">shpatz84@gmail.com</a>
-                <p>+353-0879421073</p>
-            </div>
-            <div class="social">
-                <a href="https://api.whatsapp.com/send?phone=3530879421073">
-                    <img src="../source/sociial/wattsap.webp" alt="watsaap link"></a>
-                <a href="https://dribbble.com/Drowzo"><img src="../source/sociial/dribble.png" alt="dribble link">
-                </a>
-                <a href="https://www.youtube.com/@drowzo">
-                    <img src="../source/sociial/youtube.webp" alt="youtube link">
-                </a>
-            </div>
-    </div>
-
-
-</footer>
     <script>
        
        var imageIndex =  0;
