@@ -28,38 +28,97 @@ class MyHeader extends HTMLElement {
 
 customElements.define(`my-header`, MyHeader);
 
+
+
+class MyHeaderSmall extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = 
+       ` <header >
+       <div class = "header-small">
+        <div class="logo-small">
+                <a href="./index.html" >
+                    <div>
+                        <h1 class="logo-name">dror shpatz</h1>
+                        <h2 class="logo-add">Motion Designer | Animator </h2>
+                    </div>
+                </a>
+                <button class="menu-button"><img src="./source/heroicons-dots_horizontal-basic.png"> </button>
+            </div>
+        </div>  
+            </div>
+            <ul class="menu">
+            <li> <a href="./index.html"  > Home </a></li>
+            <li> <a href="./gifs.html"  > GIFS </a></li>
+            <li>  <a href="./learning.html" >Learning content</a></li>
+            <li><a href="./about.html" > About </a></li>
+        </ul>
+        </header>`
+
+    }
+}
+
+customElements.define(`my-header-small`, MyHeaderSmall );
+
+let isPressed = false;
+const menu = document.querySelector('.menu');
+
+function closeMenu() {
+    menu.style.display = 'none';
+    isPressed = false;
+}
+const menuButton = document.querySelectorAll(`.menu-button`);
+
+menuButton[0].addEventListener('click', function () {
+    if (!isPressed) {
+        menu.style.display = 'block';
+        isPressed = true;
+    } else {
+        closeMenu();
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
 class MyFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <footer>
-        <div class="footer-contiener">
-                <div>
-                    <p id="name-footer"> Dror Shpatz<br> Motion Designer | Animator</p>
-                    <p>
-                        Ballyogan Road, Dublin, Ireland<br>
-                        2023
-                    </p>
-                </div>
-                <div class="info">
-                    <a href="malito: shpatz84@gmail.com">shpatz84@gmail.com</a>
-                    <p>+353-0879421073</p>
-                </div>
-                <div class="social">
-                    <a href="https://api.whatsapp.com/send?phone=3530879421073">
-                        <img src="./source/sociial/wattsap.webp" alt="watsaap link"></a>
-                    <a href="https://dribbble.com/Drowzo"><img src="./source/sociial/dribble.png" alt="dribble link">
-                    </a>
-                    <a href="https://www.youtube.com/@drowzo">
-                        <img src="./source/sociial/youtube.webp" alt="youtube link">
-                    </a>
-                    <a href="https://www.linkedin.com/in/dror-shpatz-01245656/?originalSubdomain=ie">
-                        <img src="./source/sociial/linkin.webp" alt="youtube link">
-                    </a>
-                </div>
-        </div>
+            <div class="footer-contiener">
+                    <div>
+                        <p id="name-footer"> Dror Shpatz<br> Motion Designer | Animator</p>
+                        <p>
+                            Ballyogan Road, Dublin, Ireland<br>
+                            2023
+                        </p>
+                    </div>
+                    <div class="info">
+                        <a href="malito: shpatz84@gmail.com">shpatz84@gmail.com</a>
+                        <p>+353-0879421073</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://api.whatsapp.com/send?phone=3530879421073">
+                            <img src="./source/sociial/wattsap.webp" alt="watsaap link"></a>
+                        <a href="https://dribbble.com/Drowzo"><img src="./source/sociial/dribble.png" alt="dribble link">
+                        </a>
+                        <a href="https://www.youtube.com/@drowzo">
+                            <img src="./source/sociial/youtube.webp" alt="youtube link">
+                        </a>
+                        <a href="https://www.linkedin.com/in/dror-shpatz-01245656/?originalSubdomain=ie">
+                            <img src="./source/sociial/linkin.webp" alt="youtube link">
+                        </a>
+                    </div>
+            </div>
 
 
-   </footer>
+        </footer>
        
         `
         }
@@ -77,6 +136,9 @@ class backButton extends HTMLElement {
      </div>`   
     }
 }
+
+
+
 
 customElements.define(`my-back`, backButton)
 
