@@ -13,19 +13,21 @@
 <body>
     
     <my-header></my-header>
+    <my-header-small></my-header-small>
   
     <div class="movie">
         <div class="movie-info">
-        <h2>Gates of Heaven videoclip</h2>
-        <p>Videoclip by Dror Shpatz and Nadav Nachmany. Bases on a story by Rahel Glick, 2013.<br>
-            Music: Ehud Banai “Ad Hapam Haba”<br>
-            My part: Animation . production: Beit Avi-hai, 2014 </p>    
+            <h2>Gates of Heaven videoclip</h2>
+            <p>Videoclip by Dror Shpatz and Nadav Nachmany. Bases on a story by Rahel Glick, 2013.<br>
+                Music: Ehud Banai “Ad Hapam Haba”<br>
+                My part: Animation . production: Beit Avi-hai, 2014 </p>    
         </div>
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/D_eXYtq9nig?si=Gjw5-HVsSNfhkMKr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="iframe-contianer">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/D_eXYtq9nig?si=Gjw5-HVsSNfhkMKr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     
-        </div>
+       
         <div class="container">
             <div class="image-container">
                 <div class="image" id="one"><img src="./source/heaven gate/photo05.jpg" alt="envite gif" class="mySlides"></div>
@@ -33,7 +35,7 @@
                 <div class="image"><img src="./source/heaven gate/s22_1_00067.png" alt="envite frame" class="mySlides"></div>
                 <div class="image"><img src="./source/heaven gate/s10_00074.png" alt="envite frame" class="mySlides"></div>
                 <div class="image"><img src="./source/heaven gate/34a.jpg" alt="envite frame" class="mySlides"></div>
-            </div>
+        </div>
 
 
 
@@ -49,7 +51,7 @@
 
         </div>
     
-        <a href="./index.html">Back</a>
+        <my-back></my-back>
     </div>
 
 

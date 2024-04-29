@@ -15,14 +15,59 @@ body {
 
 /* movies pages css*/
 .movie {
-background-color: rgb( 237,235,235 );
+    background-color: rgb( 237,235,235 );
+    overflow: auto;
+    }
 
+.movie-info {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.movie-info  h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 130%;
+}
+.movie-info  p {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-left: 0.5%;
+    line-height: 130%;
+    width: 80%;
+}
+
+.iframe-contianer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    /* height: 100%; */
+    padding-top: 56.25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    position: relative;  
+}
+.iframe-contianer iframe {
+    width: 100%;
+   position: absolute;
+   height: 100%;
+    border: none;
+}
+
+
+
 .container {
     position: relative;
     /* min-height: 100vh; */
     display: flex;
     justify-content: center;
+   
 }
 
 .container .image-container{
@@ -110,6 +155,20 @@ background-color: rgb( 237,235,235 );
     transform: translate(-50%, -50%);
  
 }
+
+@media screen and (max-width: 999px) {
+    .container .image-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .movie-info{
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: smaller;
+    }
+    
+}
+
  /*cynet brake grid*/
 #cynet {
     display: flex;
@@ -198,10 +257,11 @@ my-header-small {
         text-decoration: none;
         text-transform: uppercase;
         color: #324158;
-        font-size: 2em;
+        font-size: 1.2em;
         margin-bottom: 0;
     }
     .logo-small h2 {
+        font-size: 1rem;
         margin-top: 2%;
     }
     .logo-small{
@@ -210,6 +270,7 @@ my-header-small {
     }
 
     .menu-button {
+        transform: scale(0.7);
         border: none;
         background-color: transparent;
     }
@@ -406,7 +467,9 @@ footer {
     width: 80%;
 }
 .showreal-contianer {
-    margin: 6%;
+    margin-left: 20%;
+    margin-right: 20%;
+
 }
  .showreal iframe{
     position: absolute;
@@ -417,6 +480,7 @@ footer {
     width: 100%;
     height: 100%;
     border: none;
+    
 
     }
 
@@ -539,5 +603,7 @@ footer {
 @media screen and (max-width: 999px) {
     .about-container {
         flex-direction: column;
+        width: 80%;
     }
 }
+
