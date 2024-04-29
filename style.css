@@ -126,9 +126,9 @@ background-color: rgb( 237,235,235 );
 .header {
     margin-left: auto;
     margin-right: auto;
-    width: 84%;
+    width: 80%;
     display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
     align-items: center;
     
 }
@@ -138,6 +138,8 @@ background-color: rgb( 237,235,235 );
     display: flex;
     text-decoration: none;
     text-align: center;
+    
+    
 }
 
 .header .logo h1 {
@@ -157,23 +159,31 @@ background-color: rgb( 237,235,235 );
 .header-buttons{
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    gap: 1.2rem;
+    width: 30%;
 }
 
 .header-buttons a {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
+    text-align: center;
+    
    
+}
+/*add class to know where i am*/
+.active{
+    border-bottom: 2px dotted rgb(82, 138, 227); 
 }
 
 .header-buttons a:hover{
     color: rgb(82, 138, 227);
+    border-bottom: 2px dotted rgb(82, 138, 227); 
 }
 
 header a:visited {
     text-decoration: none;
-    color: black;
+    color: transparent;
 }
 
 
@@ -252,13 +262,143 @@ footer {
     margin-left: auto;
     margin-right: auto;
     padding: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
-.video-conteinar .video {
+.video-conteinar .video-conteinar-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.7%;
+}
+
+.video-conteinar .video-conteinar-center  div{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5% 5%;
+    overflow: hidden;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
    
   
 }
-.video-conteinar .video img{
-   width: 30%;
-    border-radius: 5% 5%;
+.video-conteinar .video-conteinar-center .video img{
+    width: 100%;
+    transition: all 1s ease;
+    
     
 }
+
+.video-conteinar .video-conteinar-center .video img:hover {
+    transform: scale(1.1);
+    filter: brightness(130%);
+
+}
+
+/* gifs css*/
+
+.gif-main {
+    background-color: rgb( 237,235,235 );
+}
+
+.head-gif {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.head-gif h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 130%;
+}
+.head-gif p {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-left: 0.5%;
+    line-height: 130%;
+    width: 80%;
+}
+
+.showreal iframe {
+    width: 100%;
+    
+
+}
+
+.showreal {
+   margin-top: 2.5%;
+   width: 60%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 2.5%;
+}
+.gifs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+   
+}
+.gifs img {
+    margin-bottom: 2.5%;
+}
+/*back button*/
+
+.center-back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-back  a{
+   display: inline;
+   text-decoration: none;
+   color: black;
+   font-size: 1.2rem;
+   transition: all 0.2s;
+   display: inline-block;
+   background-color: white;
+   padding-top: 1%;
+   padding-bottom: 1%;
+   padding-left: 2.5%;
+   padding-right: 2.5%;
+   border-radius: 25px;
+   margin-bottom: 2%;
+   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+
+}
+
+.center-back a:hover{
+    color: white;
+    background-color: black;
+}
+
+/*learning page*/
+.learning-conitianer{
+    background-color: rgb( 237,235,235 );
+  
+}
+
+.head-video{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.learning-videos {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+}
+.learning-videos iframe{
+    margin-bottom: 2%;
+}
+
+/*about*/
+

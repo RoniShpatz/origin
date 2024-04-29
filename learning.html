@@ -17,22 +17,40 @@
 
 
     <div class="learning-conitianer">
+        <div class="head-video">
         <h2>Learning content</h2>
         <div class="learning-videos">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/eg0vqFHzk1s?si=tTnlXNSQ2fljIA7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sMv8cybwWaQ?si=EcXNxuiRy9p5W6Wr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/irOxv8KZwcI?si=X1Gm1Up3280exauS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/cdZliq0_2AM?si=5xbBpx4YQ7f0R2p0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="460" height="258.75" src="https://www.youtube.com/embed/eg0vqFHzk1s?si=tTnlXNSQ2fljIA7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="460" height="258.75" src="https://www.youtube.com/embed/sMv8cybwWaQ?si=EcXNxuiRy9p5W6Wr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="460" height="258.75" src="https://www.youtube.com/embed/irOxv8KZwcI?si=X1Gm1Up3280exauS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="460" height="258.75" src="https://www.youtube.com/embed/cdZliq0_2AM?si=5xbBpx4YQ7f0R2p0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
+
+    
+
+        
+        
+        <my-back></my-back>
     </div>
 
     <my-footer></my-footer>
 
 <script  src="./header-footer.js"></script>
+<script>
+           var imageIndex =  0;
+        var videos = document.querySelectorAll(`.learning-videos iframe`)
+        console.log(videos)
 
+        videos.forEach((video, index) => {
+            document.querySelectorAll(`.popup-video`).style.display = 'block';
+            
+        })
+
+</script>
 </body>
 </html>

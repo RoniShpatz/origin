@@ -12,16 +12,19 @@ class MyHeader extends HTMLElement {
                 </a>
                 </div>
                 <div class="header-buttons">
-                    <a href="./index.html">Home</a>
-                    <a href="./gifs.html">GIFS</a>
-                    <a href="./learning.html">Learning content</a>
-                    <a href="./about.html">About</a>
+                    <a href="./index.html" class="active" > Home </a>
+                    <a href="./gifs.html" class="active" > GIFS </a>
+                    <a href="./learning.html" class="active">Learning content</a>
+                    <a href="./about.html" class="active"> About </a>
                 </div>
             </header>
        
         `
         }
     }
+
+
+
 
 customElements.define(`my-header`, MyHeader);
 
@@ -62,5 +65,33 @@ class MyFooter extends HTMLElement {
         }
     }
 
+
+
 customElements.define(`my-footer`, MyFooter);
 
+class backButton extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML =
+     `<div class="center-back">
+     <a href="./index.html" class="back">Back</a>
+     </div>`   
+    }
+}
+
+customElements.define(`my-back`, backButton)
+
+
+const links = document.querySelectorAll(`.header-buttons a`);
+console.log(links[0].getAttribute(`href`))
+
+const link = window.location.pathname;
+const newLink = link.split(`/`);
+const pathLink = './' +newLink[newLink.length - 1];
+
+links.forEach(link => {
+   if (link.getAttribute(`href`) != pathLink) {
+    link.classList.remove('active');
+   } 
+})
+
+ 
