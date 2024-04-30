@@ -58,19 +58,20 @@ class MyHeaderSmall extends HTMLElement {
 }
 
 customElements.define(`my-header-small`, MyHeaderSmall );
+const menuButton = document.querySelectorAll(`.menu-button`);
 
 let isPressed = false;
 const menu = document.querySelector('.menu');
 
 function closeMenu() {
-    menu.style.display = 'none';
+    menu.classList.remove(`open`);
     isPressed = false;
 }
-const menuButton = document.querySelectorAll(`.menu-button`);
+
 
 menuButton[0].addEventListener('click', function () {
     if (!isPressed) {
-        menu.style.display = 'block';
+        menu.classList.add(`open`);
         isPressed = true;
     } else {
         closeMenu();
