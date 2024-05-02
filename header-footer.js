@@ -183,7 +183,7 @@ const arrayHref = ['./envite.html', './maytronics.html', './matrix.html', './neb
 
 function getThePrevVideo(pathLink, arrayHref) {
    arrayHref.forEach((herf, index) => {
-    if (pathLink == herf && index != 0 && index != arrayHref.length - 1) {
+    if (pathLink == herf && index != 0 ) {
         perv = arrayHref[index - 1]
     } else if (pathLink == herf && index === 0) {
         perv = arrayHref[arrayHref.length - 1]
@@ -199,7 +199,7 @@ function getThePrevVideo(pathLink, arrayHref) {
 
 function getNextVideo(pathLink, arrayHref) {
     arrayHref.forEach((herf, index) => {
-        if (pathLink == herf && index != 0 && index != arrayHref.length - 1) {
+        if (pathLink == herf && index != arrayHref.length - 1) {
             Next = arrayHref[index + 1]
         } else if (pathLink == herf && index == arrayHref.length -1) {
             Next = arrayHref[0];
