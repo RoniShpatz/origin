@@ -83,8 +83,8 @@ menuButton[0].addEventListener('click', function () {
 
 
 
-
-
+const d = new Date();
+const year = d.getFullYear();
 
 
 
@@ -97,7 +97,7 @@ class MyFooter extends HTMLElement {
                         <p id="name-footer"> Dror Shpatz<br> Motion Designer | Animator</p>
                         <p>
                             Ballyogan Road, Dublin, Ireland<br>
-                            2023
+                            ${year}
                         </p>
                     </div>
                     <div class="info">
@@ -129,23 +129,28 @@ class MyFooter extends HTMLElement {
 
 customElements.define(`my-footer`, MyFooter);
 
-class backButton extends HTMLElement {
+
+
+
+
+
+
+class onlyBackButton extends HTMLElement {
     connectedCallback() {
         this.innerHTML =
      `<div class="center-back">
+    
      <a href="./index.html" class="back">Back</a>
+     
      </div>`   
     }
 }
 
-
-
-
-customElements.define(`my-back`, backButton)
+customElements.define(`only-my-back`, onlyBackButton)
 
 
 const links = document.querySelectorAll(`.header-buttons a`);
-console.log(links[0].getAttribute(`href`))
+// console.log(links[0].getAttribute(`href`))
 
 const link = window.location.pathname;
 const newLink = link.split(`/`);
@@ -157,4 +162,64 @@ links.forEach(link => {
    } 
 })
 
- 
+var Next = "";
+var perv = "";
+const videos = ['./envite.html', './maytronics.html', './matrix.html', './nebius.html', './cynet.html', './redecor.html', './wastless.html', './cellwise.html', './moving.html', './heaven.html', './mei.html', './pebli.html', './tel-avivi.html', './max.html', './tamir.html']
+
+
+const arrayHref = ['./envite.html', './maytronics.html', './matrix.html', './nebius.html', './cynet.html', './redecor.html', './wastless.html', './cellwise.html', './moving.html', './heaven.html', './mei.html', './pebli.html', './tel-avivi.html', './max.html', './tamir.html'];
+
+// function makeArrayOfHref(videos) {
+//     videos.forEach(video => {
+//         const href = video.getAttribute('href');
+//         const newHref = href.split('/');
+//         const strinfHerf = newHref[1]
+//         arrayHref.push(`./` + strinfHerf);
+//     });
+//     return arrayHref;
+    
+// }
+
+
+function getThePrevVideo(pathLink, arrayHref) {
+   arrayHref.forEach((herf, index) => {
+    if (pathLink == herf && index != 0 && index != arrayHref.length - 1) {
+        perv = arrayHref[index - 1]
+    } else if (pathLink == herf && index === 0) {
+        perv = arrayHref[arrayHref.length - 1]
+    } 
+    
+   })
+   return perv
+}
+
+ getThePrevVideo(pathLink, arrayHref);
+ console.log(perv)
+
+
+function getNextVideo(pathLink, arrayHref) {
+    arrayHref.forEach((herf, index) => {
+        if (pathLink == herf && index != 0 && index != arrayHref.length - 1) {
+            Next = arrayHref[index + 1]
+        } else if (pathLink == herf && index == arrayHref.length -1) {
+            Next = arrayHref[0];
+        };
+       })
+       return Next
+}
+
+getNextVideo(pathLink, arrayHref);
+console.log(Next)
+
+ class backButton extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML =
+     `<div class="center-back">
+     <a href = ${perv} class="back"> < Previous</a>
+     <a href="./index.html" class="back">Back</a>
+     <a href = ${Next} class="back">Next > </a>
+     </div>`   
+    }
+}
+
+customElements.define(`my-back`, backButton)
