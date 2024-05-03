@@ -164,10 +164,10 @@ links.forEach(link => {
 
 var Next = "";
 var perv = "";
-const videos = ['./envite.html', './maytronics.html', './matrix.html', './nebius.html', './cynet.html', './redecor.html', './wastless.html', './cellwise.html', './moving.html', './heaven.html', './mei.html', './pebli.html', './tel-avivi.html', './max.html', './tamir.html']
+// const videos = ['./envite.html', './maytronics.html', './matrix.html', './nebius.html', './cynet.html', './redecor.html', './wastless.html', './cellwise.html', './moving.html', './heaven.html', './mei.html', './pebli.html', './tel-avivi.html', './max.html', './tamir.html']
 
 
-const arrayHref = ['./envite.html', './maytronics.html', './matrix.html', './nebius.html', './cynet.html', './redecor.html', './wastless.html', './cellwise.html', './moving.html', './heaven.html', './mei.html', './pebli.html', './tel-avivi.html', './max.html', './tamir.html'];
+const arrayHref = ['./envite', './maytronics', './matrix', './nebius', './cynet', './redecor', './wastless', './cellwise', './moving', './heaven', './mei', './pebli', './tel-avivi.html', './max', './tamir'];
 
 // function makeArrayOfHref(videos) {
 //     videos.forEach(video => {
@@ -215,9 +215,9 @@ console.log(Next)
     connectedCallback() {
         this.innerHTML =
      `<div class="center-back">
-     <a href = ${perv} class="back"> < Previous</a>
+     <a href = ${perv} class="back" id="pre"> < Previous</a>
      <a href="./index.html" class="back">Back</a>
-     <a href = ${Next} class="back">Next > </a>
+     <a href = ${Next} class="back" id="next"> Next > </a>
      </div>`   
     }
 }

@@ -634,6 +634,13 @@ footer {
     background-color: black;
 }
 
+@media screen and (max-width: 640px){
+    .center-back  a {
+        
+    }
+   
+}
+
 /*learning page*/
 .learning-conitianer{
     background-color: rgb( 237,235,235 );
