@@ -167,7 +167,7 @@ var perv = "";
 // const videos = ['./envite.html', './maytronics.html', './matrix.html', './nebius.html', './cynet.html', './redecor.html', './wastless.html', './cellwise.html', './moving.html', './heaven.html', './mei.html', './pebli.html', './tel-avivi.html', './max.html', './tamir.html']
 
 
-const arrayHref = ['./envite', './maytronics', './matrix', './nebius', './cynet', './redecor', './wastless', './cellwise', './moving', './heaven', './mei', './pebli', './tel-avivi.html', './max', './tamir'];
+const arrayHref = ['./envite', './maytronics', './matrix', './nebius', './cynet', './redecor', './wastless', './cellwise', './moving', './heaven', './mei', './pebli', './tel-avivi', './max', './tamir'];
 
 // function makeArrayOfHref(videos) {
 //     videos.forEach(video => {
