@@ -633,10 +633,17 @@ footer {
     color: white;
     background-color: black;
 }
+my-back-small {
+    display: none;
+}
 
 @media screen and (max-width: 640px){
-    .center-back  a {
-        
+    my-back-small {
+       display: inline-block; 
+       width: 100%;
+    }
+    my-back {
+        display: none;
     }
    
 }

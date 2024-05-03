@@ -223,3 +223,16 @@ console.log(Next)
 }
 
 customElements.define(`my-back`, backButton)
+
+class backButtonSmall extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = 
+        `<div class="center-back">
+        <a href = ${perv} class="back" id="pre"> < </a>
+        <a href="./index.html" class="back">Back</a>
+        <a href = ${Next} class="back" id="next"> > </a>
+        </div>` 
+    }
+}
+
+customElements.define(`my-back-small`, backButtonSmall)
