@@ -207,7 +207,8 @@ body {
         margin-bottom: 0;
     }
     .movie-info p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        width: 100%;
     }
     .iframe-contianer{
         margin-left: 5%;
